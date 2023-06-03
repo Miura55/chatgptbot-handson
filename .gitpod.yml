@@ -10,15 +10,3 @@ tasks:
       init: pip3 install -r requirements.txt
       command: python3 app.py
       openMode: tab-after
-
-# Ports to expose on workspace startup
-ports:
-  - port: 5000
-    onOpen: open-preview
-    name: Woreking Check
-    description: Website Preview
-
-vscode:
-  extensions:
-    - ms-azuretools.vscode-docker
-    - timonwong.shellcheck
