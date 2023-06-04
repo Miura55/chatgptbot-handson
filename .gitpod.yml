@@ -6,7 +6,5 @@ ports:
     onOpen: ignore
 
 tasks:
-    - name: Install dependencies
-      init: pip3 install -r requirements.txt
-      command: python3 app.py
-      openMode: tab-after
+    - name: Copy environment file 
+      init: cp -n ${GITPOD_REPO_ROOT}/sample.env ${GITPOD_REPO_ROOT}/.env 
