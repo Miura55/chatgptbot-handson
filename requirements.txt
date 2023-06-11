@@ -1,4 +1,5 @@
 fastapi
 uvicorn[standard]
 python-dotenv
+line-bot-sdk
 openai
