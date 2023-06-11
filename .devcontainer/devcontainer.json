@@ -4,18 +4,14 @@
 	"name": "Chat GPT LINE bot Handson",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"dockerFile": "../.gitpod.Dockerfile",
-
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
 		5000
 	],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
-
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -47,6 +43,11 @@
 	"mounts": [
 		"source=${localWorkspaceFolder},target=/workspace/chatgptbot-handson,type=bind,consistency=cached"
 	],
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {
+			"version": "latest"
+		}
+	},
 	"postCreateCommand": "cp -n /workspace/chatgptbot-handson/sample.env /workspace/chatgptbot-handson/.env",
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "gitpod"
