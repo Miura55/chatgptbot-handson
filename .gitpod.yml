@@ -7,4 +7,6 @@ ports:
 
 tasks:
     - name: Copy environment file 
-      init: cp -n ${GITPOD_REPO_ROOT}/sample.env ${GITPOD_REPO_ROOT}/.env 
+      init: cp -n ${GITPOD_REPO_ROOT}/sample.env ${GITPOD_REPO_ROOT}/.env
+    - name: Install dependencies
+      command: pip3 install -r requirements.txt 
